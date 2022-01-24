@@ -11,14 +11,29 @@ test('creates an employee object', () => {
 });
 
 // getName()
-test('gets employee name', () => {
-    const employee = New Employee
-
-    expect(employee.getName()).toEqual(expect.any(String));
-})
+test("Gets name through getName method.", () => {
+    const testName = "Mallorie";
+    const employeeInstance = new Employee(testName);
+    expect(employeeInstance.getName()).toBe(testName);
+});
 
 // getID()
+test("Can test ID through getID method.", () => {
+    const testID = 123;
+    const employeeInstance = new Employee("Mallorie", testID);
+    expect(employeeInstance.getId()).toBe(testID);
+});
 
 // getEmail()
+test("Can test email through getEmail method.", () => {
+    const testEmail = "mflanigantwualumn@gmail.com";
+    const employeeInstance = new Employee("James", 2, testEmail);
+    expect(employeeInstance.getEmail()).toBe(testEmail);
+});
 
 // getRole() returns 'Employee'
+test("Testing role.", () => {
+    const returnValue = "Employee";
+    const employeeInstance = new Employee("Mallorie", 123, "mflanigantwualumn@gmail.com");
+    expect(employeeInstance.getRole()).toBe(returnValue);
+})

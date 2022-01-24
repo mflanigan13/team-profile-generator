@@ -16,7 +16,7 @@ const teamArray = [];
 
 // prompts
 const createEngineer = () => {
-    console.log('Answer the question to assemble your team.');
+    console.log('Answer the questions to assemble your team member.');
     inquirer.prompt ([
         {
             type: 'input',
@@ -84,7 +84,7 @@ const createEngineer = () => {
     })
 }
 const createIntern = () => {
-    console.log('Answer the question to assemble your team.');
+    console.log('Answer the questions to assemble your team member.');
     inquirer.prompt ([
         {
             type: 'input',
@@ -153,7 +153,7 @@ const createIntern = () => {
 }
 
 const createManager = () => {
-    console.log('Answer the question to assemble your team.');
+    console.log('Answer the questions to assemble your team member.');
     inquirer.prompt ([
         {
             type: 'input',
