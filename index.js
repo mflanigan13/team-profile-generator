@@ -1,5 +1,5 @@
 // link to page creation
-//const generateHTML = require('./src/generateHTML');
+const generateHTML = require('./src/generateHTML');
 
 // team profiles
 const Manager = require('./lib/Manager');
@@ -9,7 +9,11 @@ const Intern = require('./lib/Intern');
 // node modules 
 const fs = require('fs'); 
 const inquirer = require('inquirer');
-const { listenerCount } = require('process');
+const path = require('path');
+
+// path resolution
+const OUTPUT_DIR = path.resolve(__dirname, 'output');
+const OUTPUTpath = path.join(OUTPUT_DIR, 'team.html');
 
 // team array
 const teamArray = []; 
@@ -250,17 +254,12 @@ const addEmployee = () => {
 }
 
 // function to generate HTML page file using file system 
-const writeFile = data => {
-    fs.writeFile('./dist/index.html', data, err => {
-        // if there is an error 
-        if (err) {
-            console.log(err);
-            return;
-        // when the profile has been created 
-        } else {
-            console.log("Your team profile has been successfully created! Please check out the index.html")
-        }
-    })
+const writeFile = () => {
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    } else {
+        fs.writeFileSync(OUTPUTpath, generateHTML(teamArray), 'utf-8');
+    }
 }; 
 
 createManager();
