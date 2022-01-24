@@ -15,6 +15,143 @@ const { listenerCount } = require('process');
 const teamArray = []; 
 
 // prompts
+const createEngineer = () => {
+    console.log('Answer the question to assemble your team.');
+    inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'engineerName',
+            message: 'What is your name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    return 'Please enter your name!';
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your ID number?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    return 'Please enter your ID!';
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your e-mail address?',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    return 'Please enter your e-mail!';
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is your github username?',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    return 'Please enter in your github username!'
+                }
+            }
+        },
+    ])
+    .then(answers => {
+        console.log(answers);
+        const engineer = new Engineer(
+            answers.engineerName, 
+            answers.id, 
+            answers.email, 
+            answers.github)
+    
+        teamArray.push(engineer);
+        addEmployee();
+
+    })
+}
+const createIntern = () => {
+    console.log('Answer the question to assemble your team.');
+    inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'internName',
+            message: 'What is your name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    return 'Please enter your name!';
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your ID number?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    return 'Please enter your ID!';
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your e-mail address?',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    return 'Please enter your e-mail!';
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the name of your school?',
+            validate: numberInput => {
+                if (numberInput) {
+                    return true;
+                } else {
+                    return 'Please enter your school name!';
+                }
+            }
+        },
+    ]) 
+    .then(answers => {
+        console.log(answers);
+        const intern = new Intern(
+            answers.internName, 
+            answers.id, 
+            answers.email, 
+            answers.school)
+    
+        teamArray.push(intern);
+        addEmployee();
+
+    })
+}
+
 const createManager = () => {
     console.log('Answer the question to assemble your team.');
     inquirer.prompt ([
@@ -83,6 +220,8 @@ const createManager = () => {
 
     })
 }
+
+
 
 const addEmployee = () => {
     inquirer.prompt ([
