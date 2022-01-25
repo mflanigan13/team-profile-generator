@@ -1,8 +1,22 @@
 {
-  "dependencies": {
-    "inquirer": "^8.2.0"
-  },
-  "devDependencies": {
-    "jest": "^27.4.7"
+    "name": "TeamProfileGenerator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "directories": {
+      "lib": "lib",
+      "test": "test"
+    },
+    "scripts": {
+      "test": "jest --verbose test/*"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "inquirer": "^6.3.1"
+    },
+    "devDependencies": {
+      "jest": "^24.8.0"
+    }
   }
-}
+  
