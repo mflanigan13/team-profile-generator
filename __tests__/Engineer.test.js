@@ -10,13 +10,13 @@ const Engineer = require('../lib/Employee');
 
 test("Testing getGithub will return github.", () => {
     const testGithub = "mflanigan13";
-    const employeeInstance = new Employee("Mallorie", 123, "example@gmail.com", testGithub);
+    const employeeInstance = new Engineer("Mallorie", 123, "example@gmail.com", testGithub);
     expect(employeeInstance.getGithub()).toBe(testGithub);
 });
 
 // getRole() // overridden to return 'Engineer'
 test("Testing role.", () => {
     const returnValue = "Engineer";
-    const employeeInstance = new Employee("Mallorie", 123, "example@gmail.com", "githubex");
+    const employeeInstance = new Engineer("Mallorie", 123, "example@gmail.com", "githubex");
     expect(employeeInstance.getRole()).toBe(returnValue);
 });
