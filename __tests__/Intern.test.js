@@ -1,13 +1,16 @@
-// properties: name, ID, Email
+// using Intern constructor 
+const Intern = require('../lib/Intern');
 
-// getName()
+// gets school from getSchool()
+test('gets employee school', () => {
+    const intern = new Intern('Nicole', 90, 'nicole.elisaw@gmail', 'SFSU');
+    
+    expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));
+});
 
-// getID()
+// gets role from getRole()
+test('gets role of employee', () => {
+    const intern = new Intern('Nicole', 90, 'nicole.elisaw@gmail.com', 'SFSU');
 
-// getEmail()
-
-// school
-
-// getSchool()
-
-// getRole() overridden to return 'Intern'
+    expect(intern.getRole()).toEqual("Intern");
+}); 

@@ -1,12 +1,16 @@
-// properties: name, ID, Email
+// using Manager constructor 
+const Manager = require('../lib/Manager');
 
-// getName()
+// creating manager object  
+test('creates an Manager object', () => {
+    const manager = new Manager('Nicole', 90, 'nicole.elisaw@gmail', 4);
+    
+    expect(manager.officeNumber).toEqual(expect.any(Number));
+});
 
-// getID()
+// gets role from getRole()
+test('gets role of employee', () => {
+    const manager = new Manager('Nicole', 90, 'nicole.elisaw@gmail.com');
 
-// getEmail()
-
-// getRole() overridden to return manager
-
-// officeNumber
-
+    expect(manager.getRole()).toEqual("Manager");
+});

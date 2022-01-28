@@ -1,5 +1,5 @@
 // properties: name, ID, Email
-const Engineer = require('../lib/Employee');
+const Engineer = require('../lib/Engineer');
 
 // github // github user name
 // test("Gets github name through github method", () => {
@@ -20,3 +20,4 @@ test("Testing role.", () => {
     const employeeInstance = new Engineer("Mallorie", 123, "example@gmail.com", "githubex");
     expect(employeeInstance.getRole()).toBe(returnValue);
 });
+
