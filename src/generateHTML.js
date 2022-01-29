@@ -5,7 +5,7 @@ const generateTeamPage = function (team) {
         return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header bg-primary">
+            <div class="card-header bg-secondary">
                 <h3 class="text-white">${manager.name}</h3>
                 <h4 class="text-white">Manager</h4><i class="material-icons">content_paste</i>
             </div>
@@ -24,9 +24,9 @@ const generateTeamPage = function (team) {
         return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header bg-primary">
+            <div class="card-header bg-secondary">
                 <h3 class="text-white">${engineer.name}</h3>
-                <h4 class="text-white">Engineer</h4><i class="material-icons">laptop_mac</i>
+                <h4 class="text-white">Engineer</h4><i class="fas fa-glasses"></i>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
@@ -43,9 +43,9 @@ const generateTeamPage = function (team) {
         return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header bg-primary">
+            <div class="card-header bg-secondary">
                 <h3 class="text-white">${intern.name}</h3>
-                <h4 class="text-white">Intern</h4><i class="material-icons">assignment_ind</i>
+                <h4 class="text-white">Intern</h4><i class="fas fa-user-graduate"></i>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${intern.id}</p>
@@ -96,7 +96,7 @@ module.exports = team => {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading bg-danger">
+            <div class="col-12 jumbotron mb-3 team-heading bg-info">
                 <h1 class="text-center text-white">My Team</h1>
             </div>
         </div>
@@ -108,6 +108,7 @@ module.exports = team => {
             </div>
         </div>
     </div>
+    <footer><p>Made with ❤ by <a href="https://github.com/mflanigan13">Mallorie Flanigan</a></p></footer>
 </body>
 </html>
 `
