@@ -108,7 +108,8 @@ module.exports = team => {
             </div>
         </div>
     </div>
-    <footer><p>Made with ❤ by <a href="https://github.com/mflanigan13">Mallorie Flanigan</a></p></footer>
+    <footer>
+    <p>Made with ❤ by <a href="https://github.com/mflanigan13">Mallorie Flanigan</a></p></footer>
 </body>
 </html>
 `

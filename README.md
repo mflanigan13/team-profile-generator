@@ -18,7 +18,9 @@ The user should clone the repository from GitHub and download Node. This applica
 
 ## Usage
 Use inquirer from your command line to answer questions about your project. View walk through video here:
-[Screencastify](x)
+[Screencastify](https://watch.screencastify.com/v/hfYYHFeeszbcWNP8BLRe)
+
+![team-profile-page.png]()
 
 ## Contributing
 This is a project for my bootcamp and did not have any contributors.
