@@ -7,7 +7,7 @@ const generateTeamPage = function (team) {
         <div class="card h-100">
             <div class="card-header bg-secondary">
                 <h3 class="text-white">${manager.name}</h3>
-                <h4 class="text-white">Manager</h4><i class="material-icons">content_paste</i>
+                <h4 class="text-white">Manager</h4><i class="fas fa-mug-hot"></i>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${manager.id}</p>
